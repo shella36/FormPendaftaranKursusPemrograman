@@ -247,7 +247,7 @@
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#588bc4"
+                android:background="#5c8dc4"
                 android:text="DAFTAR"
                 android:textColor="#000000" />
         </LinearLayout>
