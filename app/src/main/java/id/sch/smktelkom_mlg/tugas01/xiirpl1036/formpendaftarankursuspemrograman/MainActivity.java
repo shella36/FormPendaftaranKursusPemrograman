@@ -47,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     private void doClick() {
         String nama = etnama.getText().toString();
+
 
         String jk = null;
         if (rblaki.isChecked()) {
@@ -57,24 +59,59 @@ public class MainActivity extends AppCompatActivity {
             jk = rbperempuan.getText().toString();
         }
 
+
         String email = etemail.getText().toString();
+
 
         String alamat = etalamat.getText().toString();
 
+
         String materi = "";
+        int startlen = materi.length();
         if (cbweb.isChecked()) materi += cbweb.getText() + " , ";
         if (cbvb.isChecked()) materi += cbvb.getText() + " , ";
         if (cband.isChecked()) materi += cband.getText() + " , ";
         if (cbc.isChecked()) materi += cbc.getText();
 
         String jenis = spjenis.getSelectedItem().toString();
+        String lama = "";
+        if (jenis.trim().equals("Beginner")) {
+            lama = "Anda akan Belajar Masing-Masing Materi Kursus selama 3 Bulan";
+        } else if (jenis.trim().equals("Intermediate")) {
+            lama = "Anda akan Belajar Masing-Masing Materi Kursus selama 6 Bulan";
+        } else if (jenis.trim().equals("Expert")) {
+            lama = "Anda akan Belajar Masing-Masing Materi Kursus selama 1 Tahun";
+        }
 
-        tvhasil.setText("Nama\t\t\t\t\t\t: " + nama + "\n" +
-                "Jenis Kelamin\t\t\t: " + jk + "\n" +
-                "Email\t\t\t\t\t\t: " + email + "\n" +
-                "Alamat\t\t\t\t\t\t: " + alamat + "\n" +
-                "Materi Kursus\t\t\t: " + materi + "\n" +
-                "Jenis Kursus\t\t\t: " + jenis);
+        if (nama.isEmpty()) {
+            etnama.setError("Nama belum diisi");
+            tvhasil.setText("Belum mengisi Nama");
+        } else if (jk == null) {
+            tvhasil.setText("Belum memilih Jenis Kelamin");
+
+        } else if (email.isEmpty()) {
+            etemail.setError("Email belum diisi");
+            tvhasil.setText("Belum mengisi Email");
+        } else if (alamat.isEmpty()) {
+            etalamat.setError("Alamat belum diisi");
+            tvhasil.setText("Belum mengisi Alamat");
+        } else if (materi.length() == startlen) {
+            tvhasil.setText("Belum memilih Materi Kursus");
+        } else if (jenis.trim().equals("--Pilih Jenis Kursus--")) {
+            tvhasil.setText("Belum memilih Jenis Kursus");
+        } else {
+            tvhasil.setText(
+                    "Selamat Anda Sudah Terdaftar!" + "\n" +
+                            "Nama\t\t\t\t\t\t: " + nama + "\n" +
+                            "Jenis Kelamin\t\t\t: " + jk + "\n" +
+                            "Email\t\t\t\t\t\t: " + email + "\n" +
+                            "Alamat\t\t\t\t\t\t: " + alamat + "\n" +
+                            "Materi Kursus\t\t\t: " + materi + "\n" +
+                            "Jenis Kursus\t\t\t: " + jenis + "\n\n" +
+                            lama + "\n" +
+                            "Info lebih lanjut melalui E-mail");
+        }
+
     }
 
 }
