@@ -128,24 +128,6 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/textView5"
-            style="@style/Base.TextAppearance.AppCompat.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:text="No Hp / Telp :"
-            android:textColor="#2d2d2d" />
-
-        <EditText
-            android:id="@+id/editTextNomor"
-            style="@style/Base.TextAppearance.AppCompat.Medium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:textColor="#000000" />
-
-        <TextView
             android:id="@+id/textView6"
             style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_width="wrap_content"
@@ -177,16 +159,16 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/comboBoxWeb"
+                android:id="@+id/checkBoxWeb"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="Web Development "
+                android:text="Web Development"
                 android:textColor="#000000" />
 
             <CheckBox
-                android:id="@+id/comboBoxVisual"
+                android:id="@+id/checkBoxVisual"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -202,16 +184,16 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/comboBoxAndroid"
+                android:id="@+id/checkBoxAndroid"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="Android - Java        "
+                android:text="Android - Java"
                 android:textColor="#000000" />
 
             <CheckBox
-                android:id="@+id/comboBoxC"
+                android:id="@+id/checkBoxC"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -243,7 +225,7 @@
             android:paddingTop="20dp">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/buttonDaftar"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -251,6 +233,16 @@
                 android:text="DAFTAR"
                 android:textColor="#000000" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewHasil"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:textColor="#000000"
+            tools:text="Hasil" />
 
 
     </LinearLayout>
